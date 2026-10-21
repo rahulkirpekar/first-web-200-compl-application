@@ -1,0 +1,22 @@
+Servlet:-
+---------
+   (request,response)
+	   |
+	Servlet
+	   |
+	JavaClass---> WebServer ---> Tomcat
+
+
+	 Tomcat-WebServer---"lib"	
+		|
+	       "lib"
+		|
+	[servlet-api.jar]
+
+	Servlet(I)
+	   |	
+	GenericServlet(AC)
+	   |	
+	HttpServlet(AC)
+	   |	
+	MyServlet(JavaClass)--->Servlet-->[Controller]

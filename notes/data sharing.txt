@@ -1,0 +1,15 @@
+
+
+(request,response)
+FirstServlet----------------------------------------->SecondServlet
+request.setAttribute("key",value)		Object value = request.getAttribute("key");
+							request.removeAttribute("key");
+					RequestDispatcher rd= request.getRequestDispatcher("ThirdServlet");
+					rd.forward(request,response);					
+							|	
+							|
+						ThirdServlet(request,response)	
+						Object value = request.getAttribute("key");
+
+RequestDispatcher rd= request.getRequestDispatcher("SecondServlet");
+rd.forward(request,response);

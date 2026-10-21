@@ -1,0 +1,9 @@
+Static Configuration :-
+------------------------
+	1. servlet level:-
+	-----------------
+		ServletConfig
+
+	2. application-level config:-
+	----------------------------
+		ServletContext

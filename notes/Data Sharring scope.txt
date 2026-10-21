@@ -1,0 +1,64 @@
+Data Sharing Scope :-
+---------------------
+1. page(Object--this.)
+
+
+2. request(HttpServletRequest):-
+---------------------------------
+
+	Student s = new Student(1,"Ganesh",12,100);
+	  |	
+	FirstServlet-------------------->SecondServlet
+   (request,response)------------------->(request,response)	
+
+	1. setAttribute(String key,Object value);
+	2. Object value = getAttribute(String key);
+	3. removeAttribute(String key);
+	
+
+
+
+3. session(HttpSession) :-
+--------------------------
+	1. setAttribute(String key,Object value);
+	2. Object value = getAttribute(String key);
+	3. removeAttribute(String key);
+
+
+session
+		session---[HttpSession session = request.getSession();]
+		  |
+		duration
+	login<---------------->logout
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. application(ServletContext):-
+---------------------------------
+	1. setAttribute(String key,Object value);
+	2. Object value = getAttribute(String key);
+	3. removeAttribute(String key);
+
+
