@@ -7,3 +7,34 @@ Static Configuration :-
 	2. application-level config:-
 	----------------------------
 		ServletContext
+		
+		
+		JSP :- Java Code
+------
+
+1. Scriptlet Tag -- service method
+-----------------
+	<%
+		java code
+	%>
+
+
+2. Expression Tag:- 	service method---->out.print(10+20);// display as result--30
+-----------------------
+
+	<%=10+20 %>
+
+3. Declaration Tag :-
+---------------------
+
+	<%@
+		int getCube(int no)
+		{
+			return (no*no*no);
+		}
+	%>
+
+	Cube : <%=getCube(5)%>	// 125
+
+
+

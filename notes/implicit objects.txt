@@ -1,0 +1,15 @@
+9 Implicit Objects in JSP
+
+
+-----------------------------------------------------------------------------
+No.	Implicit Object		Type / Class		Description
+-----------------------------------------------------------------------------
+1	request			HttpServletRequest	Gets client request data.
+2	response		HttpServletResponse	Sends response to the client.
+3	out			JspWriter		Prints output to the browser.
+4	session			HttpSession		Stores user-specific data.
+5	application		ServletContext		Shares data across the entire application.
+6	config			ServletConfig		Gets JSP servlet configuration information.
+7	pageContext		PageContext		Provides access to all JSP scopes and objects.
+8	page			Object			Refers to the current JSP servlet instance (this).
+9	exception		Throwable		Provides exception information (only in error pages).

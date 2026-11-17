@@ -1,0 +1,21 @@
+1. scriptlet tag ---service()
+----------------------------
+	<%
+
+
+	%>
+
+
+2. expression tag---service()---out.print(...);
+--------------------------------------------------------
+	<%= %>
+
+
+3. Declaration tag---outside service()
+-------------------------------------------
+	<%! 
+		int getCube(int no)
+		{
+			return no*no*no;
+		}
+	%>

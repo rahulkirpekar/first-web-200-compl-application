@@ -34,6 +34,52 @@
   </context-param>
 
 
+<servlet>
+  	<servlet-name>ListStudentServlet</servlet-name>
+  	<servlet-class>com.royal.controller.ListStudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ListStudentServlet</servlet-name>
+ 	<url-pattern>/ListStudentServlet</url-pattern> 
+  </servlet-mapping>
+
+<servlet>
+  	<servlet-name>InsertStudentServlet</servlet-name>
+  	<servlet-class>com.royal.controller.InsertStudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>InsertStudentServlet</servlet-name>
+ 	<url-pattern>/InsertStudentServlet</url-pattern> 
+  </servlet-mapping>
+  
+
+
+<servlet>
+  	<servlet-name>TwentryServlet</servlet-name>
+  	<servlet-class>com.royal.controller.TwentryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>TwentryServlet</servlet-name>
+ 	<url-pattern>/TwentryServlet</url-pattern> 
+  </servlet-mapping>
+  
+<servlet>
+  	<servlet-name>EighteenServlet</servlet-name>
+  	<servlet-class>com.royal.controller.EighteenServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EighteenServlet</servlet-name>
+ 	<url-pattern>/EighteenServlet</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>NineteenServlet</servlet-name>
+  	<servlet-class>com.royal.controller.NineteenServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>NineteenServlet</servlet-name>
+ 	<url-pattern>/NineteenServlet</url-pattern> 
+  </servlet-mapping>
 
  <servlet>
   	<servlet-name>FourteenServlet</servlet-name>
