@@ -2,9 +2,9 @@ package com.royal.bean;
 
 public class StudentBean 
 {
-	private int rno;
+	private Integer rno;
 	private String fullName;
-	private int age;
+	private Integer age;
 	private String course;
 	private String gender;
 	private String hobbies[];
@@ -16,9 +16,9 @@ public class StudentBean
 	public StudentBean() 
 	{
 	}
-	public StudentBean(int rno, String fullName, int age, String course, String gender, String[] hobbies, String dob,
-			String email, String mobile, String address) 
-	{
+
+	public StudentBean(Integer rno, String fullName, Integer age, String course, String gender, String[] hobbies,
+			String dob, String email, String mobile, String address) {
 		super();
 		this.rno = rno;
 		this.fullName = fullName;
@@ -32,11 +32,11 @@ public class StudentBean
 		this.address = address;
 	}
 
-	public int getRno() {
+	public Integer getRno() {
 		return rno;
 	}
 
-	public void setRno(int rno) {
+	public void setRno(Integer rno) {
 		this.rno = rno;
 	}
 
@@ -48,11 +48,11 @@ public class StudentBean
 		this.fullName = fullName;
 	}
 
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 

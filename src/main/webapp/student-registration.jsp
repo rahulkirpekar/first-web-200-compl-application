@@ -173,10 +173,10 @@ function confirmLogout() {
     <form action="InsertStudentServlet" method="post">
 
         <label>Full Name <span class="error">${fullNameErr}</span></label>
-        <input type="text" name="fullName" value="">
+        <input type="text" name="fullName" value="${sbean.fullName}">
 
         <label>Age <span class="error">${ageErr}</span></label>
-        <input type="number" name="age" value="">
+        <input type="number" name="age" value="${sbean.age}">
 
         <label>Select Course <span class="error">${courseErr}</span></label>
         <select name="course">
@@ -204,16 +204,16 @@ function confirmLogout() {
         </div>
 
         <label>Date of Birth <span class="error">${dobErr}</span></label>
-        <input type="date" name="dob" value="">
+        <input type="date" name="dob" value="${sbean.dob}">
 
         <label>Email <span class="error">${emailErr}</span></label>
-        <input type="email" name="email" value="">
+        <input type="email" name="email" value="${sbean.email}">
 
         <label>Mobile <span class="error">${mobileErr}</span></label>
-        <input type="tel" name="mobile" value="">
+        <input type="tel" name="mobile" value="${sbean.mobile}">
 
         <label>Address <span class="error">${addressErr}</span></label>
-        <textarea name="address" rows="3"></textarea>
+        <textarea name="address" rows="3">${sbean.address}</textarea>
 
         <div class="btn-container">
             <input type="submit" value="Register">

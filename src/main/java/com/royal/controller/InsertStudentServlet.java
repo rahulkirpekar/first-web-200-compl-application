@@ -153,6 +153,10 @@ public class InsertStudentServlet extends HttpServlet
 			flag = false;
 		}
 		
+		// store sbean into request
+		request.setAttribute("sbean", sbean);
+		
+		
 		RequestDispatcher rd = null;
 		
 		// sbean---studentDao----insert---MySQL--Table
