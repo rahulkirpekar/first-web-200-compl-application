@@ -111,4 +111,29 @@ public class StudentBean
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	
+	public Boolean isAvailableHobby(String hobby) 
+	{
+		if (hobbies == null) 
+		{
+			return false;
+		}
+		for (int i = 0; i < hobbies.length; i++) 
+		{
+			if (hobby.equals(hobbies[i])) 
+			{
+				return true;
+			}
+		}
+		return false;
+	}
 }
+
+
+
+
+
+
+
+
+
