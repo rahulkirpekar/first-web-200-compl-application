@@ -127,6 +127,24 @@ public class StudentBean
 		}
 		return false;
 	}
+	
+	public String getHobbiesStr() 
+	{
+		StringBuilder sb = new StringBuilder();
+		
+		for (int i = 0; i < hobbies.length; i++) 
+		{
+			if(i < (hobbies.length-1)) 
+			{
+				sb.append(hobbies[i]+",");
+			}
+			else 
+			{
+				sb.append(hobbies[i]+".");
+			}
+		} 
+		return sb.toString();
+	}
 }
 
 
