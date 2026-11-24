@@ -140,7 +140,7 @@ public class StudentBean
 			}
 			else 
 			{
-				sb.append(hobbies[i]+".");
+				sb.append(hobbies[i]);
 			}
 		} 
 		return sb.toString();

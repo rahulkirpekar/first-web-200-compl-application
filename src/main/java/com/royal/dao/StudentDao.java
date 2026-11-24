@@ -16,6 +16,9 @@ public class StudentDao
 		Connection conn = DBConnection.getConnection();
 		PreparedStatement pstmt = null;
 		int rowsAffected = 0;
+		
+		System.out.println("sbean.getHobbiesStr() : " + sbean.getHobbiesStr());
+		
 		if (conn != null) 
 		{
 			try 
@@ -43,6 +46,6 @@ public class StudentDao
 		{
 			System.out.println("Db not connected");
 		}
-		return 1;
+		return rowsAffected;
 	}
 }
