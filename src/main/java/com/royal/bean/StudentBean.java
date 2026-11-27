@@ -1,5 +1,7 @@
 package com.royal.bean;
 
+import java.util.Arrays;
+
 public class StudentBean 
 {
 	private Integer rno;
@@ -16,7 +18,6 @@ public class StudentBean
 	public StudentBean() 
 	{
 	}
-
 	public StudentBean(Integer rno, String fullName, Integer age, String course, String gender, String[] hobbies,
 			String dob, String email, String mobile, String address) {
 		super();
@@ -145,6 +146,18 @@ public class StudentBean
 		} 
 		return sb.toString();
 	}
+	@Override
+	public String toString() {
+		return "StudentBean [rno=" + rno + ", fullName=" + fullName + ", age=" + age + ", course=" + course
+				+ ", gender=" + gender + ", hobbies=" + Arrays.toString(hobbies) + ", dob=" + dob + ", email=" + email
+				+ ", mobile=" + mobile + ", address=" + address + ", getRno()=" + getRno() + ", getFullName()="
+				+ getFullName() + ", getAge()=" + getAge() + ", getCourse()=" + getCourse() + ", getGender()="
+				+ getGender() + ", getHobbies()=" + Arrays.toString(getHobbies()) + ", getDob()=" + getDob()
+				+ ", getEmail()=" + getEmail() + ", getMobile()=" + getMobile() + ", getAddress()=" + getAddress()
+				+ ", getHobbiesStr()=" + getHobbiesStr() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
+	}
+	
 }
 
 

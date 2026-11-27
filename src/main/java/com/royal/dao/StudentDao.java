@@ -2,7 +2,10 @@ package com.royal.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 import com.royal.bean.StudentBean;
 import com.royal.util.DBConnection;
@@ -48,4 +51,65 @@ public class StudentDao
 		}
 		return rowsAffected;
 	}
+
+	public ArrayList<StudentBean> getStudentRecords() 
+	{
+		String selectQuery = "SELECT * FROM student";
+		
+		Connection conn = DBConnection.getConnection(); 
+		Statement stmt = null;
+		ResultSet rs = null;
+		StudentBean sbean = null;
+		ArrayList<StudentBean> list = new ArrayList<StudentBean>();
+		if (conn != null) 
+		{
+			try 
+			{
+				stmt = conn.createStatement();
+			
+				rs = stmt.executeQuery(selectQuery);
+				
+				while (rs.next()) 
+				{
+					int id = rs.getInt(1);                  
+					String fullName =   rs.getString(2);
+					int age      =   rs.getInt(3) ;
+					String course   =   rs.getString(4) ;
+					String gender   =   rs.getString(5) ;
+					String hobbies  =   rs.getString(6) ;
+					String dob      =   rs.getString(7) ;
+					String email    =   rs.getString(8) ;
+					String mobile   =   rs.getString(9) ;
+					String address  =   rs.getString(10) ;
+					
+					String hobby[] = hobbies.split(",");
+					
+					sbean  = new StudentBean(id, fullName, age, course, gender, hobby, dob, email, mobile, address);
+					
+					list.add(sbean);
+				}
+			} catch (SQLException e) 
+			{
+				e.printStackTrace();
+			}
+		} 
+		else 
+		{
+			System.out.println("StudentDao - Db not connected");
+		}
+		return list;
+	}
+//	public static void main(String[] args) 
+//	{
+//		ArrayList<StudentBean> list = new StudentDao().getStudentRecords();
+//		
+//		for (int i = 0; i < list.size(); i++) 
+//		{
+//			StudentBean s= list.get(i);
+//			
+//			System.out.println(s);
+//			System.out.println("----------------------------");
+//		}
+//		
+//	}
 }
